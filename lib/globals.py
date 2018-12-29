@@ -10,8 +10,8 @@ import os
 import yaml
 from pygments.styles import get_all_styles
 
-USE_OS_PACKAGES = True  # set to False if you pull cheat sheets repositories from GitHub
-DOCKERIZED = False      # set to True if the service is running in a Docker container
+USE_OS_PACKAGES = False  # set to False if you pull cheat sheets repositories from GitHub
+DOCKERIZED = True      # set to True if the service is running in a Docker container
 
 SERVER_ADDRESS = '0.0.0.0'
 SERVER_PORT = 8002
@@ -32,14 +32,7 @@ TEMPLATES = os.path.join(MYDIR, 'share/templates')
 STATIC = os.path.join(MYDIR, 'share/static')
 PATH_VIM_ENVIRONMENT = os.path.join(MYDIR, 'share/vim')
 
-if USE_OS_PACKAGES:
-    PATH_TLDR_PAGES = "/home/igor/.tldr/cache/pages/*/*.md"
-    PATH_CHEAT_PAGES = "/usr/local/lib/python2.7/dist-packages/cheat/cheatsheets/*"
-    PATH_CHEAT_SHEETS = "/home/igor/cheat.sheets/sheets/"
-    PATH_CHEAT_SHEETS_SPOOL = "/home/igor/cheat.sheets/spool/"
-    PATH_LEARNXINY = "/home/igor/git/github.com/adambard/learnxinyminutes-docs"
-    PATH_LATENZ = "/home/igor/git/github.com/chubin/late.nz/bin"
-else:
+
     PATH_TLDR_PAGES = os.path.join(MYDIR, "cheatsheets/tldr/*/*.md")
     PATH_CHEAT_PAGES = os.path.join(MYDIR, "cheatsheets/cheat/*")
     PATH_CHEAT_SHEETS = os.path.join(MYDIR, "cheatsheets/sheets/")
@@ -48,12 +41,12 @@ else:
     PATH_LATENZ = os.path.join(MYDIR, "late.nz/bin")
 
 GITHUB_REPOSITORY = {
-    "late.nz"           :   'chubin/late.nz',
-    "cheat.sheets"      :   'chubin/cheat.sheets',
-    "cheat.sheets dir"  :   'chubin/cheat.sheets',
-    "tldr"              :   'tldr-pages/tldr',
-    "cheat"             :   'chrisallenlane/cheat',
-    "learnxiny"         :   'adambard/learnxinyminutes-docs',
+    "late.nz"           :   'mechanicalAI/late.nz',
+    "cheat.sheets"      :   'mechanicalAI/cheat.sheets',
+    "cheat.sheets dir"  :   'mechanicalAI/cheat.sheets',
+    "tldr"              :   'mechanicalAI/tldr',
+    "cheat"             :   'mechanicalAI/cheat',
+    "learnxiny"         :   'mechanicalAI/learnxinyminutes-docs',
     "internal"          :   '',
     "search"            :   '',
     "unknown"           :   '',
